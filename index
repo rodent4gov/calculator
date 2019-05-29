@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+  
+    <title>
+    
+    </title>
+    
+    <script>
+    
+      function myF () {
+        var obj = document.getElementById("mySelect");
+        document.getElementById("demo").innerHTML = 
+        obj.options[obj.selectedIndex].text;
+        }
+    
+    </script>
+    
+    <style>
+    
+    </style>
+    
+   </head>
+   
+   <body>
+   
+    <form>
+    Element 1:
+      <select id="mySelect">
+        <option>H</option>
+        <option>He</option>
+        <option>Li</option>
+        <option>Be</option>
+      </select>
+      
+    <button type="button" onclick="myF()"> Stoich </button>
+    
+   
+   </body>
+   
+</html>

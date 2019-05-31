@@ -1803,6 +1803,7 @@
         var $D = document.getElementById('myNumber4').value;
         var $E = document.getElementById('myNumber5').value;
         var $F = document.getElementById('M2M').value;
+        var $G = document.getElelentById('_2M').value;
         
         var tot = ($A * ele) + ($B * ele2) + ($C * ele3) + ($D * ele4) + ($E * ele5);
         
@@ -1820,6 +1821,21 @@
       	if (document.getElementById('convert').selectedIndex == 2)	{
       	var totP = ($F * (6.02 * (10 ** 23)));
       	document.getElementById('demo').innerHTML = totP.toFixed(3) + " Molecules/Formulaic Units";
+      };
+        
+       if (document.getElementById('convert2').selectedIndex == 0)	{
+      	var totM = ($G / tot);
+      	document.getElementById('demo').innerHTML = totP.toFixed(3) + " Moles";
+      };
+        
+       if (document.getElementById('convert2').selectedIndex == 1)	{
+      	var totV = ($G * 22.4);
+      	document.getElementById('demo').innerHTML = totP.toFixed(3) + " Moles";
+      };
+        
+       if (document.getElementById('convert2').selectedIndex == 2)	{
+      	var totP = ($G / (6.02 * (10 ** 23)));
+      	document.getElementById('demo').innerHTML = totP.toFixed(3) + " Moles";
       };
       
       }
@@ -1850,6 +1866,7 @@
     	<option>Volume</option>
     	<option>Number of Particles</option>
     	</select>
+      (if you choose this option don't fill in the mass, volume, or # of particles)
     	<br>
     	Or
     	<br>
@@ -2478,7 +2495,9 @@
       </select>
       	<input type="number" id="myNumber5">
       	<br>
-      	<input type="number" id="M2M" placeholder="Number of Moles" required>
+      	<input type="number" id="M2M" placeholder="Number of Moles">
+        <br>
+        <input type="number" id="_2M" placeholder="Mass, Volume, # of particles">
       
     	<button type="button" onclick="myF();"> 
     	Convert 

@@ -1825,17 +1825,17 @@
         
        if (document.getElementById('convert2').selectedIndex == 0)	{
       	var totM = ($G / tot);
-      	document.getElementById('demo').innerHTML = totP.toFixed(3) + " Moles";
+      	document.getElementById('demo2').innerHTML = totP.toFixed(3) + " Moles";
       };
         
        if (document.getElementById('convert2').selectedIndex == 1)	{
       	var totV = ($G * 22.4);
-      	document.getElementById('demo').innerHTML = totP.toFixed(3) + " Moles";
+      	document.getElementById('demo2').innerHTML = totP.toFixed(3) + " Moles";
       };
         
        if (document.getElementById('convert2').selectedIndex == 2)	{
       	var totP = ($G / (6.02 * (10 ** 23)));
-      	document.getElementById('demo').innerHTML = totP.toFixed(3) + " Moles";
+      	document.getElementById('demo2').innerHTML = totP.toFixed(3) + " Moles";
       };
       
       }
@@ -2508,6 +2508,7 @@
     	</button>
     </form>
     	<p id="demo"></p>
+      <p id="demo2"></p>
     
    
    </body>
